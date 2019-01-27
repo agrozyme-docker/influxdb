@@ -32,7 +32,7 @@ local function build_startup_statements()
 
   build_clause_statements(profile, items)
 
-  profile.user = core.getenv("DOCKER_INFLUXDB_USERNAME", "")
+  profile.user = core.getenv("DOCKER_INFLUXDB_USER", "")
   profile.password = core.getenv("DOCKER_INFLUXDB_PASSWORD", "")
   profile.database = core.getenv("DOCKER_INFLUXDB_DATABASE", "")
   build_clause_statements(profile, items)
